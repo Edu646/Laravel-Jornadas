@@ -11,7 +11,7 @@
 <div class="container mt-4">
     <h1 class="mb-4">Lista de Eventos</h1>
     <a href="{{ route('events.create') }}" class="btn btn-primary mb-3">Crear Nuevo Evento</a> 
-
+    <a href="{{ route('dashboard') }}" class="btn btn-primary mb-3">inicio</a> 
     @if(session('success'))
         <div class="alert alert-success">{{ session('success') }}</div>
     @endif

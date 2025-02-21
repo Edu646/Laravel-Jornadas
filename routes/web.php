@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\EventController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SpeakerController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -11,9 +12,23 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/Eventos', function () {
-    return view('Eventos');
-})->middleware(['auth', 'verified'])->name('Eventos');
+// routes/web.php
+
+
+
+
+Route::get('/speakers', [SpeakerController::class, 'index'])->name('speakers.index');
+Route::post('/stores', [SpeakerController::class, 'store'])->name('speakers.store');
+Route::post('/create', [SpeakerController::class, 'create'])->name('speakers.create');
+Route::post('/edits', [SpeakerController::class, 'edit'])->name('speakers.edit');
+Route::get('/speakers/{id}/edit', [SpeakerController::class, 'edit'])->name('speakers.edit');
+Route::delete('/speakers/{id}', [SpeakerController::class, 'destroy'])->name('speakers.destroy');
+Route::get('/crears', [SpeakerController::class, 'create'])->name('speakers.create');
+Route::put('/speakers/{id}', [SpeakerController::class, 'update'])->name('speakers.update');
+
+
+
+
 
 
 

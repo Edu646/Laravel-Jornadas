@@ -18,17 +18,19 @@
                 </div>
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('Eventos')" :active="request()->routeIs('Eventos')">
-                        {{ __('Eventos') }}
+                    <x-nav-link :href="route('events.index')" :active="request()->routeIs('events.index')">
+                        {{ __('Events') }}
                     </x-nav-link>
                 </div>
-
 
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                        {{ __('Ponientes') }}
+                    <x-nav-link :href="route('speakers.index')" :active="request()->routeIs('speakers.index')">
+                        {{ __('speaker') }}
                     </x-nav-link>
                 </div>
+
+
+                
             </div>
 
             <!-- Settings Dropdown -->
